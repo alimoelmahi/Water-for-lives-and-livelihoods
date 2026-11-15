@@ -1,0 +1,16 @@
+{
+  "source": "Named locations in the publication; no surveyed project coordinates supplied.",
+  "precision": "All points in projects.json are approximate locality or state references for navigation only. They are not verified sites, assets, canal alignments or implementation boundaries.",
+  "records": [
+    { "projectId": "berber", "place": "Berber", "precision": "locality" },
+    { "projectId": "associations", "place": "Ad-Damer / Al-Matamma", "precision": "multi-locality" },
+    { "projectId": "galabat", "place": "Western Galabat", "precision": "locality" },
+    { "projectId": "helat", "place": "El Rahad", "precision": "locality" },
+    { "projectId": "white-nile", "place": "Guli", "precision": "locality" },
+    { "projectId": "kalahoot", "place": "Kassala State", "precision": "state" },
+    { "projectId": "new-halfa", "place": "New Halfa", "precision": "town" },
+    { "projectId": "gedaref-credit", "place": "Gedaref", "precision": "state" },
+    { "projectId": "marawi", "place": "Marawi", "precision": "town" },
+    { "projectId": "river-market", "place": "River Nile", "precision": "state" }
+  ]
+}

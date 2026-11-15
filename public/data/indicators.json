@@ -1,0 +1,23 @@
+[
+  { "id": "solar", "value": 395, "suffix": "+", "label": "solar irrigation interventions", "scope": "Five states; not the number of mapped story records", "status": "reported", "source": "Impact at a glance; Stop 2" },
+  { "id": "capacity", "value": 1200, "suffix": "+", "unit": "kW", "label": "solar pumping capacity", "scope": "Programme-wide", "status": "reported", "source": "Stop 2" },
+  { "id": "farmers", "value": 20000, "suffix": "+", "label": "farmers supported", "scope": "Irrigation-enabled agriculture", "status": "reported", "source": "Impact at a glance; Stop 2" },
+  { "id": "women", "value": 60, "suffix": "%", "label": "of farmers reached are women", "scope": "Irrigation-enabled agriculture; not the 45% of loan borrowers", "status": "reported", "source": "Stop 2" },
+  { "id": "repayment", "value": 100, "suffix": "%", "label": "of due instalments repaid on time", "scope": "255 instalments due by mid-November 2026; not full principal repayment", "status": "reported", "source": "Stop 4, Table 2" },
+  { "id": "canals", "value": 20, "suffix": "+", "unit": "km", "label": "canals rehabilitated", "scope": "Programme-wide", "status": "reported", "source": "Stop 2" },
+  { "id": "new-land", "value": 860, "label": "newly irrigated feddans", "scope": "Programme aggregate; distinct from the 1,670 feddans cultivated in White Nile", "status": "reported", "source": "Stop 2" },
+  { "id": "inputs", "value": 120, "unit": "MT", "label": "seed and tools distributed", "scope": "15,000 farmers; 101 MT of sorghum seed included", "status": "reported", "source": "Stop 3" },
+  { "id": "schools", "value": 600, "label": "farmer field schools", "scope": "15,000 trained; recipients may overlap with input recipients", "status": "reported", "source": "Stop 3" },
+  { "id": "tractors", "value": 10, "label": "tractors handed over", "scope": "Farmer groups", "status": "reported", "source": "Stop 3" },
+  { "id": "pumps", "value": 20, "label": "solar pumps handed over with inputs", "scope": "Farmer groups; not additional to the 395+ without verification", "status": "reported", "source": "Stop 3" },
+  { "id": "loans", "value": 122, "label": "agricultural loans", "scope": "Kassala, Gedaref and Northern State", "status": "reported", "source": "Stop 4" },
+  { "id": "financing", "value": 618.5, "unit": "million SDG", "label": "lent to farmers", "scope": "November 2026 loan book", "status": "reported", "source": "Stop 4" },
+  { "id": "women-borrowers", "value": 45, "suffix": "%", "label": "women borrowers", "scope": "55 of 122; rounded", "status": "reported", "source": "Stop 4" },
+  { "id": "jobs-current", "value": 178, "label": "jobs on financed farms now", "scope": "Loan-book baseline; separate from cash-for-work jobs", "status": "reported", "source": "Stop 4" },
+  { "id": "jobs-future", "value": 351, "label": "jobs expected on financed farms", "scope": "Within six months of loan disbursement", "status": "projected", "source": "Stop 4" },
+  { "id": "land", "value": 1670, "unit": "feddans", "label": "irrigated and cultivated", "scope": "As-Safa and Ad-Dakhla, White Nile, summer 2026", "status": "reported", "source": "Kuwait Fund case study" },
+  { "id": "sorghum", "value": 835, "unit": "MT", "label": "sorghum expected", "scope": "As-Safa and Ad-Dakhla; not a harvested yield measurement", "status": "projected", "source": "Kuwait Fund case study" },
+  { "id": "production-value", "value": 6.68, "unit": "billion SDG", "label": "projected sorghum value", "scope": "White Nile, at reported Kosti prices", "status": "projected", "source": "Kuwait Fund case study" },
+  { "id": "scale", "value": 2, "unit": "million", "label": "smallholder farmers to reach", "scope": "Financing framework ambition, not achieved coverage", "status": "ambition", "source": "Stop 4; Road ahead" },
+  { "id": "poverty", "value": 4.7, "unit": "million", "label": "people agriculture could lift from poverty", "scope": "Modelled by 2043, conditional on peace, investment and reforms", "status": "scenario", "source": "Road ahead; Beyond the Conflict analysis" }
+]

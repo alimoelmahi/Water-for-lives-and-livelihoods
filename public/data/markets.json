@@ -1,0 +1,11 @@
+{
+  "source": "Report, Stop 5, Figure 6",
+  "note": "Schematic value chain; links do not represent measured trade volumes or mapped routes.",
+  "steps": [
+    { "id": "farm", "name": "Farm", "detail": "Harvest, bagging and storage close to the farm." },
+    { "id": "storage", "name": "Storage", "detail": "Keep crops safe and reduce pressure to sell at harvest-time lows." },
+    { "id": "aggregation", "name": "Aggregation", "detail": "Intermediary markets and storage bring buyers closer to producers." },
+    { "id": "market", "name": "Market", "detail": "Women-led, solar-lit local markets; 120 stalls in River Nile." },
+    { "id": "buyers", "name": "Buyers", "detail": "Bulk buyers and exporters. The Alliance's sesame deal is proposed, not completed." }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "note": "Relationships show roles described in the publication, not financial contribution sizes. The equal-width network is schematic.",
+  "nodes": [
+    { "id": "undp", "name": "UNDP", "role": "Programme implementation and coordination", "group": "core" },
+    { "id": "kuwait", "name": "Kuwait Fund", "role": "Canal rehabilitation in White Nile", "group": "water", "logo": "image3" },
+    { "id": "eaa", "name": "Education Above All", "role": "Solar irrigation in River Nile and Gedaref", "group": "water", "logo": "image6" },
+    { "id": "silatech", "name": "Silatech", "role": "Works with EAA on support in Gedaref", "group": "water" },
+    { "id": "sdc", "name": "SDC", "role": "Solar irrigation and community resilience in East Sudan", "group": "water", "logo": "image5" },
+    { "id": "qatar", "name": "Qatar Fund", "role": "Solar irrigation and farm inputs", "group": "water", "logo": "image7" },
+    { "id": "italy", "name": "Italian Cooperation", "role": "Solar irrigation and farm inputs", "group": "water", "logo": "image4" },
+    { "id": "ibdaa", "name": "Al-Ibdaa Bank", "role": "Credit Guarantee Scheme lending partner", "group": "finance" },
+    { "id": "central", "name": "Central Bank", "role": "Leadership of the Private Sector Recovery Alliance", "group": "finance" },
+    { "id": "alliance", "name": "Private Sector Recovery Alliance", "role": "Proposed sesame aggregation and trade deal", "group": "markets" }
+  ],
+  "links": [
+    { "source": "undp", "target": "kuwait" }, { "source": "undp", "target": "eaa" },
+    { "source": "eaa", "target": "silatech" }, { "source": "undp", "target": "sdc" },
+    { "source": "undp", "target": "qatar" }, { "source": "undp", "target": "italy" },
+    { "source": "undp", "target": "ibdaa" }, { "source": "undp", "target": "central" },
+    { "source": "central", "target": "alliance" }, { "source": "undp", "target": "alliance" }
+  ]
+}

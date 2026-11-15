@@ -1,0 +1,103 @@
+[
+  {
+    "id": "berber-story",
+    "projectId": "berber",
+    "title": "Hassad Alamal Association, Berber: from diesel to solar",
+    "photo": "image28",
+    "tag": "RIVER NILE / SOLAR IRRIGATION",
+    "description": "For the 85 members of Hassad Alamal Association, a 15 HP solar pump replaced diesel-powered irrigation on 18 feddans. Members added onions as a cash crop and reported an 80% rise in income. Their experience is part of the wider River Nile association programme, not an additional group to be counted separately.",
+    "metric": "+80%",
+    "metricLabel": "reported member income"
+  },
+  {
+    "id": "associations-story",
+    "projectId": "associations",
+    "title": "Solar-powered farmer associations",
+    "photo": "image12",
+    "photoPosition": "50% 0%",
+    "tag": "RIVER NILE / FARMER ASSOCIATIONS",
+    "description": "In Ad-Damer and Al-Matamma, solar-powered irrigation supported associations with 180 members cultivating 62 feddans. Together with Berber, the River Nile programme reached 265 members across four associations, with a reported average household income increase of 50%. The combined figure includes Berber; these are connected accounts of the same programme.",
+    "metric": "180",
+    "metricLabel": "association members in Ad-Damer and Al-Matamma"
+  },
+  {
+    "id": "gedaref-story",
+    "projectId": "galabat",
+    "title": "Solar irrigation for 230 women farmers in Gedaref",
+    "photo": "image37",
+    "tag": "GEDAREF / WOMEN'S LIVELIHOODS",
+    "description": "Across three villages in Western Galabat, 230 women household heads gained access to solar irrigation for vegetables grown for their families and local markets. A 28-panel system supplies around 50 cubic metres of water a day to roughly ten feddans. It removes irrigation fuel costs; reported earnings in individual accounts are not group averages.",
+    "metric": "230",
+    "metricLabel": "women household heads"
+  },
+  {
+    "id": "helat-story",
+    "projectId": "helat",
+    "title": "From fuel scarcity to harvest",
+    "photo": "image26",
+    "tag": "GEDAREF / SOLAR IRRIGATION",
+    "description": "In Helat Khalifa, solar irrigation helped farmers respond to fuel scarcity while also providing household water during the dry season. The association reports monthly diesel savings of SDG 5-7 million. Farmer Awad describes earning SDG 2-2.5 million in the last season: an individual account, not an average for the village.",
+    "metric": "SDG 5-7m",
+    "metricLabel": "reported monthly association diesel savings"
+  },
+  {
+    "id": "white-nile-story",
+    "projectId": "white-nile",
+    "title": "Canals that brought the land back",
+    "photo": "image23",
+    "tag": "WHITE NILE / CANAL REHABILITATION",
+    "description": "Canal rehabilitation in As-Safa and Ad-Dakhla helped 350 farming households, including 63 returnee and displaced households, bring land back into cultivation. Farmers planted 1,670 of the area's 3,200 feddans. The report projects 835 metric tonnes of sorghum, valued at SDG 6.68 billion; these are expected results, not a measured harvest.",
+    "metric": "835 MT",
+    "metricLabel": "sorghum expected, not yet harvested"
+  },
+  {
+    "id": "kalahoot-story",
+    "projectId": "kalahoot",
+    "title": "Kalahoot canal rehabilitation",
+    "photo": "image9",
+    "tag": "KASSALA / CANAL REHABILITATION",
+    "description": "In Kassala, the Kalahoot intervention cleared 11 kilometres of canal through cash-for-work, involving 250 participants, including 50 women. The account documents both the rehabilitation work and paid participation in it. These cash-for-work places are reported separately from jobs on financed farms and should not be added together as a count of unique beneficiaries.",
+    "metric": "11 km",
+    "metricLabel": "canal cleared"
+  },
+  {
+    "id": "new-halfa-story",
+    "projectId": "new-halfa",
+    "title": "One season, three times the land",
+    "photo": "image36",
+    "tag": "KASSALA / AGRICULTURAL FINANCE",
+    "description": "In New Halfa, 52 borrowers, including 13 women, received SDG 206.9 million for seed, fertiliser and land preparation. One farmer expanded from five to 15 feddans in a season; this is a personal account, not the average expansion. The report records 80 jobs at disbursement and expects 162 within six months.",
+    "metric": "52",
+    "metricLabel": "borrowers"
+  },
+  {
+    "id": "gedaref-credit-story",
+    "projectId": "gedaref-credit",
+    "title": "Women livestock keepers who guarantee each other",
+    "photo": "image38",
+    "tag": "GEDAREF / WOMEN'S ACCESS TO FINANCE",
+    "description": "In Bandegaw and Rufaa, 25 women livestock keepers accessed SDG 55 million through solidarity guarantees, without cheques or collateral. Their loans form part of Gedaref's 43 loans, rather than a separate state total. The account records 22 current jobs and 32 expected jobs, distinguishing work already supported from the anticipated result.",
+    "metric": "25",
+    "metricLabel": "women livestock keepers"
+  },
+  {
+    "id": "marawi-story",
+    "projectId": "marawi",
+    "title": "Commercial smallholders scaling up",
+    "photo": "image36",
+    "tag": "NORTHERN / AGRICULTURAL FINANCE",
+    "description": "In Marawi, 17 farmers received SDG 187.8 million in expansion finance, with individual loans ranging from SDG 10 million to SDG 24 million. The report records 35 current jobs and expects 72. These farmers are included in Northern State's 27 loans, so the local account should not be counted again alongside the state total.",
+    "metric": "17",
+    "metricLabel": "farmers receiving expansion finance"
+  },
+  {
+    "id": "river-market-story",
+    "projectId": "river-market",
+    "title": "Women-led market in River Nile",
+    "photo": "image54",
+    "tag": "RIVER NILE / WOMEN'S MARKETS",
+    "description": "A women-led market in River Nile provides 120 stalls, with 50 reserved for displaced women. Solar lighting supports longer trading hours, while child-friendly facilities form part of the market's design. These figures describe trading spaces, not a verified number of individual traders; the report does not name the town or give a trader count.",
+    "metric": "120",
+    "metricLabel": "market stalls, not individual traders"
+  }
+]

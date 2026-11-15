@@ -1,0 +1,11 @@
+{
+  "source": "Supplied Locality_Poly_Mar20 shapefile, dissolved by State_En. March 2020 vintage; not a current operational boundary reference.",
+  "boundaryNote": "18 states and the separately coded Abyei PCA area are preserved as supplied. Boundaries and names do not imply official endorsement or acceptance.",
+  "priority": [
+    { "name": "River Nile", "label": "River Nile", "focus": "From diesel to solar", "photo": "image28", "summary": "Four farmer associations are irrigating 80 feddans with solar power. Their 265 members report an average 50% rise in household income.", "metric": "+50%", "metricLabel": "average household income, four associations" },
+    { "name": "Gedaref", "label": "Gedaref", "focus": "Solar irrigation for 230 women farmers in Gedaref", "photo": "image37", "summary": "Solar water, solidarity-backed credit and local markets are helping women grow vegetables, keep livestock and earn an income.", "metric": "230", "metricLabel": "women household heads reached by solar irrigation" },
+    { "name": "White Nile", "label": "White Nile", "focus": "Canals that brought the land back", "photo": "image23", "summary": "At As-Safa and Ad-Dakhla, rehabilitated canals have returned 1,670 feddans to production for 350 farming households, including 63 returnee or displaced families.", "metric": "1,670", "metricLabel": "feddans cultivated in the 2026 summer season" },
+    { "name": "Kassala", "label": "Kassala", "focus": "Kalahoot irrigation canal and New Halfa farmer loans", "photo": "image9", "summary": "Cash-for-work restored the 11 km Kalahoot canal. In New Halfa, credit is helping farmers fund a season and expand cultivated land.", "metric": "250", "metricLabel": "people earned income clearing Kalahoot canal" },
+    { "name": "Northern", "label": "Northern", "focus": "Commercial smallholders scaling up", "photo": "image36", "summary": "In Marawi, 17 farmers took expansion loans worth SDG 187.8 million for land preparation, inputs, livestock and poultry.", "metric": "17", "metricLabel": "farmers financed for expansion in Marawi" }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "water-for-lives-and-livelihoods",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "test": "node --test test/atlas.test.js",
+    "test:e2e": "playwright test",
+    "test:pages": "playwright test --config playwright.pages.config.js"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "d3-sankey": "^0.12.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "fflate": "^0.8.2",
+    "polygon-clipping": "^0.15.7",
+    "shapefile": "^0.6.6",
+    "sharp": "^0.35.5",
+    "topojson-client": "^3.1.0",
+    "topojson-server": "^3.0.1",
+    "topojson-simplify": "^3.0.3",
+    "vite": "^6.4.1"
+  }
+}

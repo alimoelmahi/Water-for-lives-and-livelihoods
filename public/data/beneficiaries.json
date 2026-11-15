@@ -1,0 +1,12 @@
+{
+  "source": "Publication, Impact at a glance, Stops 2–4 and case studies.",
+  "note": "These populations overlap. Do not sum project, programme, association or loan-book counts. Households, members, workers, borrowers and stalls are distinct units. Null means not reported, not zero.",
+  "groups": [
+    { "id": "irrigation", "count": 20000, "qualifier": "more than", "unit": "farmers", "womenPercent": 60 },
+    { "id": "input-recipients", "count": 15000, "unit": "farmers receiving seed and tools" },
+    { "id": "trainees", "count": 15000, "unit": "farmers trained", "mayOverlapWith": ["input-recipients"] },
+    { "id": "borrowers", "count": 122, "unit": "farmer borrowers", "womenCount": 55 },
+    { "id": "white-nile-households", "count": 350, "unit": "farming households", "returneeOrDisplacedHouseholds": 63 },
+    { "id": "kalahoot-workers", "count": 250, "unit": "cash-for-work participants", "womenCount": 50 }
+  ]
+}
