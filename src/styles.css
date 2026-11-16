@@ -78,6 +78,10 @@ button:hover, a:hover { transition: color .18s, background .18s, border-color .1
 .hero .button.primary:hover { background: #dceefa; }
 .hero .quiet-link:hover { color: #bfe5ff; }
 .hero :focus-visible { outline-color: white; }
+.footer-supporters { padding-block: 18px; border-bottom: 1px solid var(--line); }
+.footer-supporters > .eyebrow { color: var(--muted); font-size: 8px; }
+.footer-supporter-logos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; gap: 20px; list-style: none; padding: 0; margin: 12px 0 0; }
+.footer-supporter-logos img { width: 160px; max-width: 100%; height: 44px; object-fit: contain; object-position: left center; mix-blend-mode: multiply; }
 .atlas-section { padding-top: 48px; }
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 35px; margin-bottom: 28px; }
 .section-heading h2 { font-size: clamp(30px, 3vw, 44px); line-height: 1.1; margin-top: 12px; }
@@ -314,6 +318,7 @@ blockquote cite { display: block; font-family: "Segoe UI", Arial, sans-serif; fo
 .partner-roles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 24px; margin-top: 20px; }
 .partner-roles > div { border-top: 1px solid var(--line); padding-block: 12px; }
 .partner-roles dt { font-size: 14px; font-weight: 550; line-height: 1.5; }
+.partner-logo { display: block; width: 200px; max-width: 100%; height: 72px; object-fit: contain; object-position: left center; mix-blend-mode: multiply; padding: 8px; margin-bottom: 10px; }
 .partner-roles dd { margin: 5px 0 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .future-figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; border-top: 1px solid var(--line); padding-top: 16px; }
 .future-figures > div { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -528,6 +533,8 @@ dialog::backdrop { background: #0e2629a8; backdrop-filter: blur(4px); }
   .hero-footnote { display: none; }
   .hero-visual::after { background: linear-gradient(90deg, #071c1ed9, #071c1eb3); }
   .hero-photo { object-position: 32% 50%; }
+  .footer-supporter-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .footer-supporter-logos img { height: 36px; }
   .atlas-section { padding-top: 36px; }
   .section-heading { display: block; margin-bottom: 24px; }
   .section-heading h2 { font-size: 34px; margin-top: 10px; }

@@ -1,15 +1,15 @@
 {
   "note": "Relationships show roles described in the publication, not financial contribution sizes. The equal-width network is schematic.",
   "nodes": [
-    { "id": "undp", "name": "UNDP", "role": "Programme implementation and coordination", "group": "core" },
+    { "id": "undp", "name": "UNDP", "role": "Programme implementation and coordination", "group": "core", "logo": "image2" },
     { "id": "kuwait", "name": "Kuwait Fund", "role": "Canal rehabilitation in White Nile", "group": "water", "logo": "image3" },
     { "id": "eaa", "name": "Education Above All", "role": "Solar irrigation in River Nile and Gedaref", "group": "water", "logo": "image6" },
-    { "id": "silatech", "name": "Silatech", "role": "Works with EAA on support in Gedaref", "group": "water" },
+    { "id": "silatech", "name": "Silatech", "role": "Works with EAA on support in Gedaref", "group": "water", "logo": "partner-silatech", "logoSource": "https://www.qatarfund.org.qa/partner/silatech/", "logoAssetSource": "https://www.qatarfund.org.qa/wp-content/uploads/2021/01/Silatech.png" },
     { "id": "sdc", "name": "SDC", "role": "Solar irrigation and community resilience in East Sudan", "group": "water", "logo": "image5" },
     { "id": "qatar", "name": "Qatar Fund", "role": "Solar irrigation and farm inputs", "group": "water", "logo": "image7" },
     { "id": "italy", "name": "Italian Cooperation", "role": "Solar irrigation and farm inputs", "group": "water", "logo": "image4" },
-    { "id": "ibdaa", "name": "Al-Ibdaa Bank", "role": "Credit Guarantee Scheme lending partner", "group": "finance" },
-    { "id": "central", "name": "Central Bank", "role": "Leadership of the Private Sector Recovery Alliance", "group": "finance" },
+    { "id": "ibdaa", "name": "Al-Ibdaa Bank", "role": "Credit Guarantee Scheme lending partner", "group": "finance", "logo": "partner-ibdaa-sudan", "logoSource": "https://agfund.org/en/focusAreas/financialInclusion/AMUbanks", "logoAssetSource": "https://agfund.org/images/banks/6.png" },
+    { "id": "central", "name": "Central Bank", "role": "Leadership of the Private Sector Recovery Alliance", "group": "finance", "logo": "partner-central-bank-sudan", "logoSource": "https://cbos.gov.sd", "logoAssetSource": "https://cbos.gov.sd/sites/default/files/CBOS%2520logo%2520Black_6_17_10_1_38_52.jpg" },
     { "id": "alliance", "name": "Private Sector Recovery Alliance", "role": "Proposed sesame aggregation and trade deal", "group": "markets" }
   ],
   "links": [

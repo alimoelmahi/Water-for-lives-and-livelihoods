@@ -74,7 +74,7 @@ function renderPartners(container, partners) {
   container.innerHTML = `<p class="eyebrow">UNDP SUDAN / PARTNERS</p><h3>With the support of</h3>
     <p class="chart-intro">These organisations support implementation, irrigation, finance and market access. The roles below are described in the report; no financial contribution amounts are shown.</p>
     <dl id="partner-roles" class="partner-roles">${partners.nodes.map(node =>
-      `<div><dt>${escapeHTML(node.name)}</dt><dd>${escapeHTML(node.role)}</dd></div>`).join('')}</dl>
+      `<div><dt>${node.logo ? `<img class="partner-logo" src="images/${escapeHTML(node.logo)}.webp" alt="" width="200" height="72">` : ''}<span>${escapeHTML(node.name)}</span></dt><dd>${escapeHTML(node.role)}</dd></div>`).join('')}</dl>
     <p class="source-note">Source: publication, Stops 2, 4 and 5. Roles are not a ranking of contributions. The Alliance's sesame deal remains proposed.</p>`;
 }
 

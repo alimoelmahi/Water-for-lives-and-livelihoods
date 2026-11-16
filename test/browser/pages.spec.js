@@ -19,6 +19,9 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844
     await expect(page.locator('#preloader')).toHaveCount(0);
     await expect(page.locator('#map-results')).toHaveText('10 documented stories / Sudan');
     expect(await page.locator('.hero-photo').evaluate(image => image.complete && image.naturalWidth > 0)).toBe(true);
+    await expect(page.locator('.footer-supporter-logos img')).toHaveCount(5);
+    await expect.poll(() => page.locator('.footer-supporter-logos img').evaluateAll(images =>
+      images.every(image => image.complete && image.naturalWidth > 0))).toBe(true);
     await page.locator('#show-localities').check();
     await expect(page.locator('.locality-boundaries path')).toHaveCount(189);
     await page.locator('#state-select').selectOption('Gedaref');
@@ -39,6 +42,10 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844
     await expect(page.locator('#loan-total')).toHaveText('122');
     await page.locator('#loan-breakdown').selectOption('women');
     await expect(page.locator('#loan-total')).toHaveText('55');
+    await page.getByRole('tab', { name: /Partners/ }).click();
+    await expect(page.locator('.partner-logo')).toHaveCount(9);
+    await expect.poll(() => page.locator('.partner-logo').evaluateAll(images =>
+      images.every(image => image.complete && image.naturalWidth > 0))).toBe(true);
     const publicationURL = await page.locator('.report-link').evaluate(link => link.href);
     expect(new URL(publicationURL).pathname).toBe(`${root.pathname}publication.docx`);
     const publication = await page.request.get(publicationURL);

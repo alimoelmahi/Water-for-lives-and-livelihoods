@@ -97,7 +97,7 @@ function start() {
       <section id="atlas" class="atlas-section page-width" aria-labelledby="atlas-title">
         <div class="section-heading"><div><p class="eyebrow">01 / AGRICULTURAL RECOVERY IN SUDAN</p><h2 id="atlas-title">Solar irrigation, finance and markets</h2><p>Explore the locations and field stories documented in the report.</p></div><div class="section-aside"><span class="live-dot"></span> Five focus states <span class="divider">/</span> Field impact stories</div></div>
         <div class="atlas-shell">
-          <div class="atlas-toolbar"><div class="atlas-toolbar-title">${icons.layers}<strong>Intervention footprint</strong><span class="pill">SUDAN</span></div><div class="atlas-actions"><button class="text-button" id="download-map">Download map PNG ${icons.download}</button><button class="text-button" id="download-data">Download data JSON ${icons.download}</button></div><button id="reset-filters" class="text-button">Reset exploration <span aria-hidden="true">↻</span></button></div>
+          <div class="atlas-toolbar"><div class="atlas-toolbar-title">${icons.layers}<strong>Intervention footprint</strong><span class="pill">SUDAN</span></div><div class="atlas-actions"><button class="text-button" id="download-map">Download map PNG ${icons.download}</button></div><button id="reset-filters" class="text-button">Reset exploration <span aria-hidden="true">↻</span></button></div>
           <div class="atlas-layout">
             <aside class="map-sidebar" aria-label="Atlas filters">
               <label class="search-control">${icons.search}<input id="map-search" type="search" placeholder="Find a place or story" aria-label="Search places and stories"></label>
@@ -129,8 +129,18 @@ function start() {
       </section>
       <section class="closing-section"><div class="page-width closing-inner"><div><p class="eyebrow">SCALING UP</p><h2>An invitation to partners</h2><p>From hundreds of farms to the ambition of two million smallholders.<br>Help connect water, energy, finance and markets.</p><a class="button light" href="https://www.undp.org/sudan" target="_blank" rel="noopener noreferrer">Connect with UNDP Sudan ${icons.arrow}</a></div><div class="closing-mark" aria-hidden="true"><span>WATER</span><i>+</i><span>INPUTS</span><i>+</i><span>FINANCE</span><i>+</i><span>MARKETS</span><hr><strong>LIVELIHOOD<br>RECOVERY</strong></div></div></section>
       <section class="sources-section page-width"><div><p class="eyebrow">REFERENCES</p><h3>The analytics behind this story</h3><p>Based on <em>Water for Lives and Livelihoods: Solar Irrigation, Finance and Markets for Agricultural Recovery in Sudan</em>, UNDP Sudan, 2026. Data reflect the supplied publication, including its November 2026 loan-book snapshot.</p><button class="text-button" id="sources-button">Sources, definitions & limitations ${icons.arrow}</button></div><div class="evidence-key"><span><i class="key-dot reported"></i><strong>Reported</strong> Documented in the publication</span><span><i class="key-dot projected"></i><strong>Projected</strong> Expected, not yet measured</span><span><i class="key-dot ambition"></i><strong>Ambition / scenario</strong> Conditional future potential</span></div></section>
+      <aside class="footer-supporters page-width" aria-label="With the support of">
+        <p class="eyebrow">With the support of</p>
+        <ul class="footer-supporter-logos">
+          <li><img src="images/image3.webp" alt="Kuwait Fund" width="160" height="44"></li>
+          <li><img src="images/image4.webp" alt="Italian Cooperation" width="160" height="44"></li>
+          <li><img src="images/image5.webp" alt="SDC" width="160" height="44"></li>
+          <li><img src="images/image6.webp" alt="Education Above All" width="160" height="44"></li>
+          <li><img src="images/image7.webp" alt="Qatar Fund" width="160" height="44"></li>
+        </ul>
+      </aside>
     </main>
-    <footer class="site-footer page-width"><a class="brand footer-brand" href="https://www.undp.org/sudan"><img src="images/image2.webp" alt="UNDP" width="27" height="55"><span>Water for Lives<br><strong>and Livelihoods</strong></span></a><p>An interactive companion to the UNDP Sudan publication.<br>All photographs © UNDP Sudan. OCHA humanitarian icons.</p><div><a href="publication.docx" download>Download the publication ${icons.download}</a><button class="text-button" id="all-data">Download evidence dataset ${icons.download}</button><span>2026 / SUDAN</span></div></footer>
+    <footer class="site-footer page-width"><a class="brand footer-brand" href="https://www.undp.org/sudan"><img src="images/image2.webp" alt="UNDP" width="27" height="55"><span>Water for Lives<br><strong>and Livelihoods</strong></span></a><p>An interactive companion to the UNDP Sudan publication.<br>All photographs © UNDP Sudan. OCHA humanitarian icons.</p><div><a href="publication.docx" download>Download the publication ${icons.download}</a><span>2026 / SUDAN</span></div></footer>
     <dialog id="detail-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close dialog">×</button><div id="dialog-body"></div></dialog>
     <div id="toast" class="toast" role="status" hidden></div>`;
 
@@ -242,15 +252,6 @@ function start() {
     showDialog(`<div class="dialog-content sources-dialog"><p class="eyebrow">EVIDENCE & METHODOLOGY</p><h2 id="dialog-title">Sources, definitions and limitations</h2><p>This is a companion to the supplied UNDP Sudan publication, not an independently verified evaluation or a live monitoring system.</p><h3>Report and reference period</h3><p><em>Water for Lives and Livelihoods: Solar Irrigation, Finance and Markets for Agricultural Recovery in Sudan</em>, 2026. Field accounts cover 2025–2026. Finance figures reflect the publication's November 2026 snapshot.</p><h3>Geography</h3><p>${esc(states.source)} ${esc(states.boundaryNote)}</p><p>Project coordinates were not supplied in the report. All project points are approximate locality or state references curated for navigation. They do not locate farms, borrowers or assets precisely. The state layer excludes schematic river overlays and zero-area polygon artifacts; valid boundaries and interior holes are preserved.</p><p>Circle area is proportional to the number of matching story records in a state. The map shows ${projects.length} curated records, not all 395+ interventions. The women theme shades states by the number of matching stories with published women counts, not by a beneficiary rate. Pink does not imply greater total reach.</p><p>The supplied water-project CSV covers a different inventory and has not been merged with agricultural case studies without a verified crosswalk.</p><h3>People and overlapping figures</h3><p>Farmers, members, workers, households, borrowers and market stalls are different units. Project and programme populations overlap and must not be summed. A missing count means not reported, never zero. One feddan is about 0.42 hectares.</p><h3>Finance</h3><p>122 loans, including 67 crops/inputs and 55 livestock/poultry loans. 55 borrowers are women. The report publishes state by activity and state by gender, but not gender by activity or individual loan records. Only supported filters are enabled.</p><p><strong>100% repayment</strong> means all 255 instalments due by mid-November were paid on time, with 111 loans in repayment. It does not mean every loan's full principal has been repaid.</p><h3>Projections and ambitions</h3><p>351 jobs, 835 MT of sorghum and SDG 6.68 billion in production value are expected figures, not measured outcomes. Two million farmers is a financing ambition. The 4.7 million poverty-reduction figure is a conditional scenario for 2043.</p><h3>Data not provided</h3><p>There is no surveyed project inventory, beneficiary microdata, partner contribution ledger or loan-level dataset. Capital costs are not reported for each irrigation system, so no return-on-investment or payback calculation is presented. Conceptual networks do not encode financial or trade volumes.</p><h3>Publication references</h3><ul><li>UNDP–Al-Ibdaa Bank loan database, November 2026, as summarized in the publication.</li><li>UNDP Sudan field impact stories, 2025–2026.</li><li>UNDP and ITC, SAMRA, August 2026.</li><li>UNDP Private Sector Engagement Strategy 2026–2028.</li><li>UNDP Solar Energy Value Chain Study, March 2026.</li><li>UNDP and ISS, Beyond the Conflict, 2026.</li></ul><h3>Photography and identity</h3><p>${esc(photos.credit)} Photograph captions distinguish illustrative images from documented site photographs. OCHA icons come from the supplied assets.</p><a class="button primary" href="publication.docx" download>Download the source publication ${icons.download}</a></div>`);
   }
 
-  function downloadJSON(value, name) {
-    const blob = new Blob([JSON.stringify(value, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url; link.download = name; link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    notify('Your evidence download is ready.');
-  }
-
   let toastTimer;
   function notify(message) {
     const toast = document.querySelector('#toast');
@@ -328,17 +329,6 @@ function start() {
       button.disabled = false;
       button.removeAttribute('aria-busy');
     }
-  });
-  document.querySelector('#download-data').addEventListener('click', () => downloadJSON({
-    source: 'UNDP Sudan, Water for Lives and Livelihoods, 2026',
-    filters: { state, stage: 'all', search, enabledLayers },
-    caveat: 'Approximate location references only. Mixed beneficiary units; overlapping populations must not be summed. This is a story selection, not the full programme inventory.',
-    projects: currentProjects(),
-  }, 'sudan-atlas-selection.json'));
-  document.querySelector('#all-data').addEventListener('click', async () => {
-    if (!evidenceData) await loadEvidence();
-    if (evidenceData) downloadJSON({ ...datasets, ...evidenceData }, 'sudan-atlas-evidence.json');
-    else notify('The evidence download failed. Use the retry button in the evidence section.');
   });
   const tabButtons = [...document.querySelectorAll('[role="tab"]')];
   const tabList = document.querySelector('.evidence-tabs');

@@ -107,7 +107,6 @@ test('the open atlas layout blends into the page across desktop, tablet and mobi
     await expect(page.locator('.atlas-shell')).toHaveCSS('border-top-width', '0px');
     await expect(page.locator('.atlas-shell')).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
     await expect(page.locator('#download-map')).toBeInViewport();
-    await expect(page.locator('#download-data')).toBeInViewport();
     const map = await page.locator('.map-main').boundingBox();
     const panel = await page.locator('#place-panel').boundingBox();
     if (width > 960) expect(panel.x - map.x - map.width).toBeGreaterThanOrEqual(23);
@@ -576,6 +575,68 @@ test('results show supported loan breakdowns and explain reported, projected and
 });
 
 for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844 }]) {
+  test(`footer supporter logos stay compact and match the report: ${viewport.width}px`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await page.goto('/');
+    await expect(page.locator('#preloader')).toHaveCount(0);
+    const strip = page.getByRole('complementary', { name: 'With the support of' });
+    const logos = strip.locator('img');
+    await expect(logos).toHaveCount(5);
+    expect(await logos.evaluateAll(images => images.map(image => image.alt))).toEqual([
+      'Kuwait Fund', 'Italian Cooperation', 'SDC', 'Education Above All', 'Qatar Fund',
+    ]);
+    await expect.poll(() => logos.evaluateAll(images => images.every(image =>
+      image.complete && image.naturalWidth > 0))).toBe(true);
+    await strip.scrollIntoViewIfNeeded();
+    const { supporters, sources, footer } = await strip.evaluate(element => ({
+      supporters: element.getBoundingClientRect().toJSON(),
+      sources: document.querySelector('.sources-section').getBoundingClientRect().toJSON(),
+      footer: document.querySelector('.site-footer').getBoundingClientRect().toJSON(),
+    }));
+    expect(supporters.y).toBeCloseTo(sources.y + sources.height, 0);
+    expect(supporters.y + supporters.height).toBeLessThanOrEqual(footer.y);
+    expect(supporters.height).toBeLessThanOrEqual(viewport.width === 390 ? 160 : 110);
+    for (const logo of await logos.all()) {
+      await expect(logo).toHaveCSS('object-fit', 'contain');
+      await expect(logo).toHaveCSS('mix-blend-mode', 'multiply');
+      const bounds = await logo.boundingBox();
+      expect(bounds.height).toBeLessThanOrEqual(44);
+      expect(bounds.x).toBeGreaterThanOrEqual(supporters.x);
+      expect(bounds.x + bounds.width).toBeLessThanOrEqual(supporters.x + supporters.width);
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(viewport.width);
+  });
+
+  test(`partner logos fit the compact support panel: ${viewport.width}px`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await page.goto('/#evidence');
+    await page.getByRole('tab', { name: /Partners/ }).click();
+    const partners = page.locator('#partner-roles > div');
+    await expect(partners).toHaveCount(10);
+    const logos = partners.locator('.partner-logo');
+    await expect(logos).toHaveCount(9);
+    await expect.poll(() => logos.evaluateAll(images => images.every(image =>
+      image.complete && image.naturalWidth > 0))).toBe(true);
+    for (const logo of await logos.all()) {
+      await expect(logo).toHaveCSS('object-fit', 'contain');
+      await expect(logo).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+      await expect(logo).toHaveCSS('mix-blend-mode', 'multiply');
+      const bounds = await logo.evaluate(image => ({
+        image: image.getBoundingClientRect().toJSON(),
+        partner: image.closest('dl > div').getBoundingClientRect().toJSON(),
+      }));
+      expect(bounds.image.width).toBeLessThanOrEqual(200);
+      expect(bounds.image.height).toBe(72);
+      expect(bounds.image.x).toBeGreaterThanOrEqual(bounds.partner.x);
+      expect(bounds.image.right).toBeLessThanOrEqual(bounds.partner.right);
+    }
+    await expect(partners.filter({ hasText: 'Silatech' }).locator('img')).toHaveAttribute('src', 'images/partner-silatech.webp');
+    await expect(partners.filter({ hasText: 'Al-Ibdaa Bank' }).locator('img')).toHaveAttribute('src', 'images/partner-ibdaa-sudan.webp');
+    await expect(partners.filter({ hasText: 'Central Bank' }).locator('img')).toHaveAttribute('src', 'images/partner-central-bank-sudan.webp');
+    await expect(partners.filter({ hasText: 'Proposed sesame aggregation and trade deal' }).locator('img')).toHaveCount(0);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(viewport.width);
+  });
+
   test(`results stay compact without hiding evidence: ${viewport.width}px`, async ({ page }) => {
     await page.setViewportSize(viewport);
     await page.goto('/');
@@ -679,23 +740,12 @@ test('rapid tab changes settle on the latest panel and reduced motion cancels an
   expect(underline.x).toBeCloseTo(selected.x, 0);
 });
 
-test('exports retain provenance and dialogs support keyboard dismissal', async ({ page }) => {
+test('JSON download options are absent while sources and the publication remain available', async ({ page }) => {
   await page.goto('/');
-  await page.locator('#field-stories-title').scrollIntoViewIfNeeded();
-  await page.locator('#state-select').selectOption('White Nile');
-  const downloadPromise = page.waitForEvent('download');
-  await page.locator('#download-data').click();
-  const download = await downloadPromise;
-  expect(download.suggestedFilename()).toBe('sudan-atlas-selection.json');
-  const stream = await download.createReadStream();
-  const chunks = [];
-  for await (const chunk of stream) chunks.push(chunk);
-  const exported = JSON.parse(Buffer.concat(chunks).toString('utf8'));
-  expect(exported.filters.state).toBe('White Nile');
-  expect(exported.filters.stage).toBe('all');
-  expect(exported.projects).toHaveLength(1);
-  expect(exported.projects[0].coordinatePrecision).toContain('Approximate');
-  expect(exported.projects[0].beneficiaryUnit).toContain('households');
+  await expect(page.locator('#map-results')).toHaveText('10 documented stories / Sudan');
+  await expect(page.locator('#download-data, #all-data')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: /Download.*(?:JSON|dataset)/i })).toHaveCount(0);
+  await expect(page.locator('.site-footer a[download]')).toHaveAttribute('href', 'publication.docx');
   await page.locator('#sources-button').click();
   await expect(page.getByRole('dialog')).toContainText('255 instalments due');
   await page.keyboard.press('Escape');
@@ -723,7 +773,6 @@ for (const variant of ['national', 'filtered state', 'filtered coverage', 'empty
     await expect(page.locator('.state-shape')).toHaveCount(19);
     await expect(page.locator('.map-main')).toHaveCSS('background-color', 'rgb(245, 245, 245)');
     await expect(page.locator('.atlas-toolbar #download-map')).toBeVisible();
-    await expect(page.locator('.atlas-toolbar #download-data')).toBeVisible();
     const toolbar = await page.locator('.atlas-toolbar').boundingBox();
     const mapBox = await page.locator('#map-canvas').boundingBox();
     expect(toolbar.y + toolbar.height).toBeLessThanOrEqual(mapBox.y);
