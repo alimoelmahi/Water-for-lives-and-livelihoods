@@ -4,31 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#006eb5" />
-    <meta name="description" content="Explore how connected investments in water, inputs, finance and markets are helping Sudan's farmers rebuild their livelihoods. An interactive atlas based on UNDP Sudan's 2026 impact publication." />
+    <meta name="description" content="End of life for GIS products. This dashboard is no longer active." />
     <title>Water for Lives &amp; Livelihoods | Sudan Impact Atlas</title>
     <link rel="icon" type="image/webp" href="images/image2.webp" />
-    <link rel="preload" as="image" href="images/image58.webp" imagesrcset="images/image58-600.webp 600w, images/image58-960.webp 960w, images/image58.webp 1440w" imagesizes="(max-width: 960px) 1440px, 100vw" />
     <style>
-      body.preloading { overflow: hidden; }
-      .preloader { position: fixed; inset: 0; z-index: 1000; background: #232e3d; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; font-family: "Segoe UI", Arial, sans-serif; }
-      .preloader-logo { width: 40px; height: 81px; object-fit: contain; }
-      .preloader-number { font-size: 28px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
-      .preloader-track { width: 180px; height: 4px; background: #ffffff26; border-radius: 2px; overflow: hidden; }
-      .preloader-fill { display: block; width: 0; height: 100%; background: #ff5a2c; border-radius: 2px; }
-      body.preloading .hero-copy, body.preloading .hero-visual { opacity: 0; transform: translateY(14px); }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; background: #232e3d; color: #fff; font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+      .retirement-wall { position: fixed; inset: 0; overflow: auto; display: grid; place-items: center; padding: 32px 24px; }
+      .retirement-notice { width: 100%; max-width: 640px; margin-block: auto; text-align: center; }
+      .retirement-label { margin: 0 0 18px; color: #8cc6df; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+      h1 { margin: 0; font-size: clamp(30px, 6vw, 52px); font-weight: 600; letter-spacing: -.04em; line-height: 1.15; }
+      .retirement-description { margin: 20px 0 0; color: #d3dee8; font-size: 16px; line-height: 1.65; }
     </style>
   </head>
-  <body class="preloading">
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div id="preloader" class="preloader" role="status" aria-label="Opening the Sudan impact atlas">
-      <img class="preloader-logo" src="images/image2.webp" alt="UNDP" width="40" height="81" />
-      <span class="preloader-number" aria-hidden="true">0%</span>
-      <div class="preloader-track" role="progressbar" aria-label="Preparing the map and report content" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="preloader-fill"></span></div>
-    </div>
-    <div id="app" inert aria-busy="true">
-      <div class="boot-message" role="status">Opening the Sudan impact atlas…</div>
-    </div>
-    <noscript><style>#preloader { display: none; } body.preloading { overflow: auto; }</style><p>JavaScript is required to open the interactive atlas. <a href="publication.docx">Download the source report instead.</a></p></noscript>
-    <script type="module" src="/src/main.js"></script>
+  <body>
+    <main class="retirement-wall" aria-labelledby="retirement-title">
+      <div class="retirement-notice">
+        <p class="retirement-label">Water for lives and livelihoods</p>
+        <h1 id="retirement-title">End of life for GIS products</h1>
+        <p class="retirement-description">This dashboard is no longer active. Map exploration and interactive features are unavailable.</p>
+      </div>
+    </main>
   </body>
 </html>

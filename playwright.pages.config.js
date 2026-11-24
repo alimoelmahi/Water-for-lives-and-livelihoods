@@ -4,7 +4,7 @@ const baseURL = 'http://127.0.0.1:5175/Water-for-lives-and-livelihoods/';
 
 export default defineConfig({
   testDir: './test/browser',
-  testMatch: '**/pages.spec.js',
+  testMatch: '**/retirement.spec.js',
   fullyParallel: true,
   use: {
     baseURL,

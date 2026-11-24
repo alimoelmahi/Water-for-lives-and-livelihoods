@@ -2,6 +2,12 @@
 
 A responsive, map-led companion to the supplied UNDP Sudan publication. Built with Vite and D3. No external map service, API key, backend or remotely hosted font is required.
 
+## Current status: retired
+
+The public entry page now displays a permanent full-screen **End of life for GIS products** notice. There is no dismiss control, and the dashboard JavaScript is not loaded, so maps, filters, story routes and download controls cannot be used from the page. The notice also works without JavaScript. The implementation and historical interaction tests are retained for reference; the active browser configurations test the retirement notice at both the root and GitHub Pages repository path.
+
+This is a user-interface retirement, not access control: files in `public` remain directly accessible by URL. A previously deployed site changes only after these edits are pushed and deployed. The experience descriptions below document the former dashboard.
+
 ## Run
 
 Requires Node.js 22.12+.
